@@ -1,6 +1,7 @@
 use super::*;
 
 const NCCS: usize = 32;
+const KERNEL_NCCS: usize = 19;
 
 type TcflagT = u32;
 type CcT = u8;
@@ -19,8 +20,56 @@ pub struct Termios {
     pub c_ospeed: SpeedT,
 }
 
+#[derive(Debug, Default, Copy, Clone)]
+#[repr(C)]
+pub struct KernelTermios {
+    pub c_iflag: TcflagT,
+    pub c_oflag: TcflagT,
+    pub c_cflag: TcflagT,
+    pub c_lflag: TcflagT,
+    pub c_line: CcT,
+    pub c_cc: [CcT; KERNEL_NCCS],
+    pub c_ispeed: SpeedT,
+    pub c_ospeed: SpeedT,
+}
+
+impl KernelTermios {
+    fn to_termios(&self) -> Termios {
+        let mut c_cc = [0; NCCS];
+        c_cc[..KERNEL_NCCS].copy_from_slice(&self.c_cc);
+        Termios {
+            c_iflag: self.c_iflag,
+            c_oflag: self.c_oflag,
+            c_cflag: self.c_cflag,
+            c_lflag: self.c_lflag,
+            c_line: self.c_line,
+            c_cc: c_cc,
+            c_ispeed: self.c_ispeed,
+            c_ospeed: self.c_ospeed,
+        }
+    }
+}
+
+impl Termios {
+    fn to_kernel_termios(&self) -> KernelTermios {
+        let mut c_cc = [0; KERNEL_NCCS];
+        c_cc.copy_from_slice(&self.c_cc[..KERNEL_NCCS]);
+
+        KernelTermios {
+            c_iflag: self.c_iflag,
+            c_oflag: self.c_oflag,
+            c_cflag: self.c_cflag,
+            c_lflag: self.c_lflag,
+            c_line: self.c_line,
+            c_cc: c_cc,
+            c_ispeed: self.c_ispeed,
+            c_ospeed: self.c_ospeed,
+        }
+    }
+}
+
 async_io::impl_ioctl_cmd! {
-    pub struct TcGets<Input=(), Output=Termios> {}
+    pub struct TcGets<Input=(), Output=KernelTermios> {}
 }
 
 impl TcGets {
@@ -40,24 +89,28 @@ impl TcGets {
             retval
         });
 
-        self.set_output(termios);
+        let kernel_termios = termios.to_kernel_termios();
+        trace!("kernel termios = {:?}", kernel_termios);
+        self.set_output(kernel_termios);
         Ok(())
     }
 }
 
 async_io::impl_ioctl_cmd! {
-    pub struct TcSets<Input=Termios, Output=()> {}
+    pub struct TcSets<Input=KernelTermios, Output=()> {}
 }
 
 impl TcSets {
     pub fn execute(&self, host_fd: FileDesc) -> Result<()> {
+        let kernel_termios = self.input();
+        let termios = kernel_termios.to_termios();
         try_libc!({
             let mut retval: i32 = 0;
             let status = occlum_ocall_ioctl(
                 &mut retval as *mut i32,
                 host_fd as i32,
                 BuiltinIoctlNum::TCSETS as i32,
-                self.input() as *const Termios as *mut c_void,
+                &termios as *const Termios as *mut c_void,
                 std::mem::size_of::<Termios>(),
             );
             assert!(status == sgx_status_t::SGX_SUCCESS);

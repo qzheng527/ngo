@@ -567,17 +567,17 @@ int test_ioctl_FIOCLEX(void) {
 static test_case_t test_cases[] = {
     TEST_CASE(test_tty_ioctl_TIOCGWINSZ),
     TEST_CASE(test_ioctl_TCGETS_TCSETS),
-    TEST_CASE(test_sgx_ioctl_SGXIOC_IS_EDMM_SUPPORTED),
-    TEST_CASE(test_sgx_ioctl_SGXIOC_GET_EPID_GROUP_ID),
-    TEST_CASE(test_sgx_ioctl_SGXIOC_GEN_EPID_QUOTE),
-    TEST_CASE(test_sgx_ioctl_SGXIOC_SELF_TARGET),
-    TEST_CASE(test_sgx_ioctl_SGXIOC_CREATE_AND_VERIFY_REPORT),
-#ifndef OCCLUM_DISABLE_DCAP
-    TEST_CASE(test_sgx_ioctl_SGXIOC_GENERATE_AND_VERIFY_DCAP_QUOTE),
-#endif
-    TEST_CASE(test_ioctl_SIOCGIFCONF),
-    TEST_CASE(test_ioctl_FIONBIO),
-    TEST_CASE(test_ioctl_FIOCLEX),
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_IS_EDMM_SUPPORTED),
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_GET_EPID_GROUP_ID),
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_GEN_EPID_QUOTE),
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_SELF_TARGET),
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_CREATE_AND_VERIFY_REPORT),
+// #ifndef OCCLUM_DISABLE_DCAP
+//     TEST_CASE(test_sgx_ioctl_SGXIOC_GENERATE_AND_VERIFY_DCAP_QUOTE),
+// #endif
+//     TEST_CASE(test_ioctl_SIOCGIFCONF),
+//     TEST_CASE(test_ioctl_FIONBIO),
+//     TEST_CASE(test_ioctl_FIOCLEX),
 };
 
 int main() {
