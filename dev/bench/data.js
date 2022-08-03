@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659517028725,
+  "lastUpdate": 1659519964062,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -136,6 +136,54 @@ window.BENCHMARK_DATA = {
           {
             "name": "per95",
             "value": 404.61,
+            "unit": "ms",
+            "extra": "Sysbench thread 95th percentile latency"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "ba1a170465364f2eeb74be56bb35e1e7457cc20f",
+          "message": "[ci] Increase the default sysbench time to 60s",
+          "timestamp": "2022-08-03T17:32:09+08:00",
+          "tree_id": "d726bbaedbcf5d60f748e061fa2302a3ec144c29",
+          "url": "https://github.com/qzheng527/ngo/commit/ba1a170465364f2eeb74be56bb35e1e7457cc20f"
+        },
+        "date": 1659519963373,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "min",
+            "value": 2.53,
+            "unit": "ms",
+            "extra": "Sysbench thread minimum latency"
+          },
+          {
+            "name": "avg",
+            "value": 167.04,
+            "unit": "ms",
+            "extra": "Sysbench thread average latency"
+          },
+          {
+            "name": "max",
+            "value": 1309.84,
+            "unit": "ms",
+            "extra": "Sysbench thread maximum latency"
+          },
+          {
+            "name": "per95",
+            "value": 467.3,
             "unit": "ms",
             "extra": "Sysbench thread 95th percentile latency"
           }
