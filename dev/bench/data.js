@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659505573991,
+  "lastUpdate": 1659506629563,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -43,6 +43,50 @@ window.BENCHMARK_DATA = {
           {
             "name": "Latency - 95th percentile",
             "value": 1499,
+            "unit": "ms"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "83a23ea4d14bd5611cdd7421a0b8ad919435e79d",
+          "message": "[debug] Update sysbench result",
+          "timestamp": "2022-08-03T13:54:12+08:00",
+          "tree_id": "54816b1c44e6fdb8ef29a7cf80963e6d7b376e6d",
+          "url": "https://github.com/qzheng527/ngo/commit/83a23ea4d14bd5611cdd7421a0b8ad919435e79d"
+        },
+        "date": 1659506628813,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Latency - min",
+            "value": 0.15,
+            "unit": "ms"
+          },
+          {
+            "name": "Latency - avg",
+            "value": 194,
+            "unit": "ms"
+          },
+          {
+            "name": "Latency - max",
+            "value": 6578,
+            "unit": "ms"
+          },
+          {
+            "name": "Latency - 95th percentile",
+            "value": 1556,
             "unit": "ms"
           }
         ]
