@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659666197873,
+  "lastUpdate": 1659666336439,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -232,6 +232,54 @@ window.BENCHMARK_DATA = {
           {
             "name": "Thread 95th Percentile Latency",
             "value": 434.83,
+            "unit": "ms",
+            "extra": "per95"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "ca0cd1aecc1b7c4ff5e1b345155c9fc3f85e220a",
+          "message": "[ci] Add iperf3 benchmark ci",
+          "timestamp": "2022-08-05T10:13:08+08:00",
+          "tree_id": "be82f0992cbd95afe734b8f0fb60f5c7ef3bb098",
+          "url": "https://github.com/qzheng527/ngo/commit/ca0cd1aecc1b7c4ff5e1b345155c9fc3f85e220a"
+        },
+        "date": 1659666335440,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Threads Minimum latency",
+            "value": 2.78,
+            "unit": "ms",
+            "extra": "min"
+          },
+          {
+            "name": "Threads Average Latency",
+            "value": 171.62,
+            "unit": "ms",
+            "extra": "avg"
+          },
+          {
+            "name": "Threads Maximum Latency",
+            "value": 1386.74,
+            "unit": "ms",
+            "extra": "max"
+          },
+          {
+            "name": "Thread 95th Percentile Latency",
+            "value": 475.79,
             "unit": "ms",
             "extra": "per95"
           }
