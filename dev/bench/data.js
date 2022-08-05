@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659677609244,
+  "lastUpdate": 1659678461207,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -486,6 +486,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 408,
+            "unit": "Gbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "06a543379ac6787d14338ba9e99354eb675f2a07",
+          "message": "[ci] Set benchmark jobs concurrency",
+          "timestamp": "2022-08-05T13:36:36+08:00",
+          "tree_id": "c6c611960e3e5a92f5792ebbd348ae9f870ed2ff",
+          "url": "https://github.com/qzheng527/ngo/commit/06a543379ac6787d14338ba9e99354eb675f2a07"
+        },
+        "date": 1659678460015,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 280,
+            "unit": "Gbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 242,
             "unit": "Gbits/sec",
             "extra": "receiver"
           }
