@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1659678642674,
+  "lastUpdate": 1659682541532,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -424,6 +424,54 @@ window.BENCHMARK_DATA = {
           {
             "name": "Thread 95th Percentile Latency",
             "value": 450.77,
+            "unit": "ms",
+            "extra": "per95"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "d6d30f592bbf1b14c28d5b0e69343c5fd3d7d4ad",
+          "message": "[ci] Set benchmark jobs concurrency",
+          "timestamp": "2022-08-05T14:44:41+08:00",
+          "tree_id": "0de1e0b66ab54ab3f7454e8cbd75d3432682f0a1",
+          "url": "https://github.com/qzheng527/ngo/commit/d6d30f592bbf1b14c28d5b0e69343c5fd3d7d4ad"
+        },
+        "date": 1659682541045,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Threads Minimum latency",
+            "value": 2.84,
+            "unit": "ms",
+            "extra": "min"
+          },
+          {
+            "name": "Threads Average Latency",
+            "value": 161.08,
+            "unit": "ms",
+            "extra": "avg"
+          },
+          {
+            "name": "Threads Maximum Latency",
+            "value": 1290.62,
+            "unit": "ms",
+            "extra": "max"
+          },
+          {
+            "name": "Thread 95th Percentile Latency",
+            "value": 442.73,
             "unit": "ms",
             "extra": "per95"
           }
