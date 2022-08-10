@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660101659156,
+  "lastUpdate": 1660101956086,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Benchmark": [
@@ -990,6 +990,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 3563,
+            "unit": "Mbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "cb933a7187704d02bc45d91ccfeec9fbfbab7036",
+          "message": "[benchmark] Add clean step for benchmark ci",
+          "timestamp": "2022-08-10T11:13:48+08:00",
+          "tree_id": "a8ed797d3acb5b5d68f232ee821ad1e2f0a8582f",
+          "url": "https://github.com/qzheng527/ngo/commit/cb933a7187704d02bc45d91ccfeec9fbfbab7036"
+        },
+        "date": 1660101955249,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 3611,
+            "unit": "Mbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 3610,
             "unit": "Mbits/sec",
             "extra": "receiver"
           }
