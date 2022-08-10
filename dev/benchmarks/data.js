@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660114849832,
+  "lastUpdate": 1660115230464,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -70,6 +70,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 3792,
+            "unit": "Mbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "committer": {
+            "email": "huaiqing.zq@antgroup.com",
+            "name": "Zheng, Qi",
+            "username": "qzheng527"
+          },
+          "distinct": true,
+          "id": "771283c78e5bd54f43f5aaef5b49466caae4ae43",
+          "message": "[benchmark] Increase test time to 120s",
+          "timestamp": "2022-08-10T14:54:14+08:00",
+          "tree_id": "f70dd44774c31217977447c96c299be464c79722",
+          "url": "https://github.com/qzheng527/ngo/commit/771283c78e5bd54f43f5aaef5b49466caae4ae43"
+        },
+        "date": 1660115229609,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 3146,
+            "unit": "Mbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 3145,
             "unit": "Mbits/sec",
             "extra": "receiver"
           }
