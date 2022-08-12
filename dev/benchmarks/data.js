@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660271237304,
+  "lastUpdate": 1660295646902,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -178,6 +178,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 3622,
+            "unit": "Mbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "geding.lq@antgroup.com",
+            "name": "LI Qing",
+            "username": "liqinggd"
+          },
+          "committer": {
+            "email": "tatetian@gmail.com",
+            "name": "Tate, Hongliang Tian",
+            "username": "tatetian"
+          },
+          "distinct": true,
+          "id": "4f0806127e65c1cdbac402d48aeb5ad3b518caac",
+          "message": "[test] Add test case for async sfs",
+          "timestamp": "2022-08-11T17:30:06-07:00",
+          "tree_id": "9decca354077f0161db276d4f9b6208e6a3fecc7",
+          "url": "https://github.com/qzheng527/ngo/commit/4f0806127e65c1cdbac402d48aeb5ad3b518caac"
+        },
+        "date": 1660295645256,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 3711,
+            "unit": "Mbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 3710,
             "unit": "Mbits/sec",
             "extra": "receiver"
           }
