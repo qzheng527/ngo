@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1660614553659,
+  "lastUpdate": 1660614929625,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -534,6 +534,54 @@ window.BENCHMARK_DATA = {
           {
             "name": "Threads Maximum Latency",
             "value": 792.57,
+            "unit": "ms",
+            "extra": "max"
+          },
+          {
+            "name": "Thread 95th Percentile Latency",
+            "value": 272.27,
+            "unit": "ms",
+            "extra": "per95"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "geding.lq@antgroup.com",
+            "name": "LI Qing",
+            "username": "liqinggd"
+          },
+          "committer": {
+            "email": "volcano.dr@hotmail.com",
+            "name": "volcano",
+            "username": "volcano0dr"
+          },
+          "distinct": true,
+          "id": "49a55608604681e7fbf1d9ad49cce3623b9b1b1e",
+          "message": "Fix the path length limit and update sefs",
+          "timestamp": "2022-08-15T09:51:09+08:00",
+          "tree_id": "f8f95c3863faf1a4fab6802ddbc05b0797da90ea",
+          "url": "https://github.com/qzheng527/ngo/commit/49a55608604681e7fbf1d9ad49cce3623b9b1b1e"
+        },
+        "date": 1660614928798,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Threads Minimum latency",
+            "value": 0.05,
+            "unit": "ms",
+            "extra": "min"
+          },
+          {
+            "name": "Threads Average Latency",
+            "value": 50.85,
+            "unit": "ms",
+            "extra": "avg"
+          },
+          {
+            "name": "Threads Maximum Latency",
+            "value": 937.6,
             "unit": "ms",
             "extra": "max"
           },
