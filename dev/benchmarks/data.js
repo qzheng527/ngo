@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1671747651276,
+  "lastUpdate": 1671833638740,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -390,6 +390,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 2451,
+            "unit": "Mbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Zheng, Qi",
+            "username": "qzheng527",
+            "email": "huaiqing.zq@antgroup.com"
+          },
+          "committer": {
+            "name": "volcano",
+            "username": "volcano0dr",
+            "email": "volcano.dr@hotmail.com"
+          },
+          "id": "9c2a80838055ff8d04676de701916ffbad8b13fb",
+          "message": "Fix occlum build bug for pal lib version",
+          "timestamp": "2022-12-09T09:26:32Z",
+          "url": "https://github.com/qzheng527/ngo/commit/9c2a80838055ff8d04676de701916ffbad8b13fb"
+        },
+        "date": 1671833637691,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 1945,
+            "unit": "Mbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 1945,
             "unit": "Mbits/sec",
             "extra": "receiver"
           }
