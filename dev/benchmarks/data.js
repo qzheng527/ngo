@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673388780039,
+  "lastUpdate": 1673389148605,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -900,6 +900,40 @@ window.BENCHMARK_DATA = {
           {
             "name": "Receiver Average Rate",
             "value": 3970,
+            "unit": "Mbits/sec",
+            "extra": "receiver"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Zheng, Qi",
+            "username": "qzheng527",
+            "email": "huaiqing.zq@antgroup.com"
+          },
+          "committer": {
+            "name": "Zheng, Qi",
+            "username": "qzheng527",
+            "email": "huaiqing.zq@antgroup.com"
+          },
+          "id": "bc279d86bbae49f56f721b23ce2f75b8ff5b0104",
+          "message": "[ci] do repo clean when starting each hw ci job",
+          "timestamp": "2023-01-09T08:43:02Z",
+          "url": "https://github.com/qzheng527/ngo/commit/bc279d86bbae49f56f721b23ce2f75b8ff5b0104"
+        },
+        "date": 1673389147569,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "Sender Average Rate",
+            "value": 3878,
+            "unit": "Mbits/sec",
+            "extra": "sender"
+          },
+          {
+            "name": "Receiver Average Rate",
+            "value": 3878,
             "unit": "Mbits/sec",
             "extra": "receiver"
           }
