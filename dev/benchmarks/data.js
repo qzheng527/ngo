@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1673475222985,
+  "lastUpdate": 1673475594392,
   "repoUrl": "https://github.com/qzheng527/ngo",
   "entries": {
     "Iperf3 Benchmark": [
@@ -2270,6 +2270,52 @@ window.BENCHMARK_DATA = {
           {
             "name": "Threads Maximum Latency",
             "value": 588.4,
+            "unit": "ms",
+            "extra": "max"
+          },
+          {
+            "name": "Thread 95th Percentile Latency",
+            "value": 240.02,
+            "unit": "ms",
+            "extra": "per95"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Zheng, Qi",
+            "username": "qzheng527",
+            "email": "huaiqing.zq@antgroup.com"
+          },
+          "committer": {
+            "name": "Zheng, Qi",
+            "username": "qzheng527",
+            "email": "huaiqing.zq@antgroup.com"
+          },
+          "id": "bc279d86bbae49f56f721b23ce2f75b8ff5b0104",
+          "message": "[ci] do repo clean when starting each hw ci job",
+          "timestamp": "2023-01-09T08:43:02Z",
+          "url": "https://github.com/qzheng527/ngo/commit/bc279d86bbae49f56f721b23ce2f75b8ff5b0104"
+        },
+        "date": 1673475593531,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Threads Minimum latency",
+            "value": 0.07,
+            "unit": "ms",
+            "extra": "min"
+          },
+          {
+            "name": "Threads Average Latency",
+            "value": 46.67,
+            "unit": "ms",
+            "extra": "avg"
+          },
+          {
+            "name": "Threads Maximum Latency",
+            "value": 558.33,
             "unit": "ms",
             "extra": "max"
           },
